@@ -3,17 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #050505;
-  --foreground: #fafafa;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-bg-hover: rgba(255, 255, 255, 0.06);
+  /* Warm Dark Theme Palette */
+  --background: #1c1917;
+  /* Stone 900 - Warmer than black */
+  --foreground: #f5f5f4;
+  /* Stone 100 */
+
+  /* Glass effect with warm tint */
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-bg-hover: rgba(255, 255, 255, 0.08);
   --card-border: rgba(255, 255, 255, 0.08);
-  --primary: #6366f1;
-  --secondary: #ec4899;
-  --accent: #8b5cf6;
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --text-tertiary: #52525b;
+
+  /* Warmer Accents */
+  --primary: #fbbf24;
+  /* Amber 400 */
+  --secondary: #fb7185;
+  /* Rose 400 */
+  --accent: #f59e0b;
+  /* Amber 500 */
+
+  --text-primary: #fafaf9;
+  /* Stone 50 */
+  --text-secondary: #a8a29e;
+  /* Stone 400 */
+  --text-tertiary: #78716c;
+  /* Stone 500 */
 }
 
 /* Custom Utilities */
@@ -23,6 +37,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--card-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .gradient-text {
@@ -33,12 +48,14 @@
   }
 
   .gradient-bg {
-    background: radial-gradient(circle at 15% 50%,
-        rgba(99, 102, 241, 0.15),
-        transparent 25%),
-      radial-gradient(circle at 85% 30%,
-        rgba(236, 72, 153, 0.15),
-        transparent 25%);
+    background: radial-gradient(circle at 0% 0%,
+        rgba(251, 191, 36, 0.08),
+        /* Amber tint */
+        transparent 40%),
+      radial-gradient(circle at 100% 100%,
+        rgba(251, 113, 133, 0.08),
+        /* Rose tint */
+        transparent 40%);
     position: fixed;
     top: 0;
     left: 0;
