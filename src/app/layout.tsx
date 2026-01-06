@@ -44,6 +44,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  other: {
+    'google-adsense-account': 'ca-pub-2054582141950401',
+  },
 };
 
 export default function RootLayout({
@@ -53,6 +56,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2054582141950401"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={inter.className}>
         {children}
       </body>
