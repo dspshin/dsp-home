@@ -17,19 +17,24 @@ export default function ServiceCard({ service }: { service: Service }) {
             animate={{ opacity: 1, y: 0 }}
             className="glass rounded-xl overflow-hidden transition-all duration-300 hover:bg-white/5 active:scale-[0.98] sm:active:scale-100 group"
         >
-            {/* Mobile-friendly touch target */}
             <div
-                className="p-4 sm:p-5 cursor-pointer flex items-center gap-4 sm:gap-5"
+                className="p-4 sm:p-5 cursor-pointer flex items-center justify-between"
                 onClick={() => setIsOpen(!isOpen)}
+                style={{ display: 'flex', alignItems: 'center', gap: '24px' }}
             >
-                <div className="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-xl overflow-hidden bg-white/5 border border-white/10 group-hover:scale-105 transition-transform duration-300">
-                    <Image
-                        src={service.icon}
-                        alt={service.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 56px, 64px"
-                    />
+                <div
+                    className="relative w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-lg overflow-hidden bg-white/5 border border-white/10 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center"
+                    style={{ width: '48px', height: '48px', minWidth: '48px' }}
+                >
+                    {service.icon ? (
+                        <img
+                            src={service.icon}
+                            alt={service.title}
+                            className="w-full h-full object-cover"
+                        />
+                    ) : (
+                        <Monitor className="w-8 h-8 text-[var(--text-tertiary)]" />
+                    )}
                 </div>
 
                 <div className="flex-1 min-w-0 py-1">
@@ -43,12 +48,13 @@ export default function ServiceCard({ service }: { service: Service }) {
 
                 <button
                     className={clsx(
-                        "p-2 rounded-full bg-white/5 group-hover:bg-white/10 transition-all duration-300 shrink-0",
-                        isOpen ? "rotate-180 bg-white/10" : ""
+                        "p-2 rounded-full transition-all duration-300 shrink-0",
+                        isOpen ? "rotate-180" : ""
                     )}
+                    style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.1)', color: '#a8a29e' }}
                     aria-label={isOpen ? "Collapse" : "Expand"}
                 >
-                    <ChevronDown className="w-5 h-5 text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]" />
+                    <ChevronDown className="w-5 h-5" />
                 </button>
             </div>
 
@@ -121,6 +127,6 @@ export default function ServiceCard({ service }: { service: Service }) {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </motion.div>
+        </motion.div >
     );
 }
