@@ -111,7 +111,7 @@ export const services: Service[] = [
       { category: 'Styling', value: 'Tailwind CSS' },
       { category: 'AI/Vision', value: 'MediaPipe Tasks Vision (Face Landmarker)' },
     ],
-    screenshot: '/screenshots/facefate.png',
+    screenshot: '/screenshots/facefate.jpg',
     note: 'Google MediaPipe를 통해 추출된 478개의 3D 얼굴 랜드마크(Mesh)를 기반으로, 벡터 연산을 통해 주요 관상 포인트를 정량적으로 분석합니다.',
   },
 ];
