@@ -49,4 +49,28 @@ export const services: Service[] = [
     ],
     screenshot: '/screenshots/saju.png',
   },
+  {
+    id: 'animal-face',
+    title: '동물상 테스트 AI',
+    link: 'https://animalface.dsp.ai.kr/',
+    icon: 'https://animalface.dsp.ai.kr/icon.png',
+    description: '사용자의 얼굴 특징을 분석하여 8가지 동물상(강아지, 고양이, 쿼카 등) 중 어떤 동물과 가장 닮았는지 알려주는 모바일 웹 애플리케이션입니다. Google MediaPipe를 활용하여 서버 전송 없이 안전하게 분석합니다.',
+    features: [
+      '개인정보 보호 (100% 클라이언트 처리)',
+      '8가지 동물상 정밀 분석 (강아지, 고양이, 토끼 등)',
+      '실시간 카메라 및 파일 업로드 분석',
+    ],
+    techStack: [
+      { category: 'Framework', value: 'Next.js 15 (App Router)' },
+      { category: 'Language', value: 'TypeScript' },
+      { category: 'Styling', value: 'Tailwind CSS v4' },
+      { category: 'Vision', value: 'Google MediaPipe Face Landmarker (Client-side WASM)' },
+      { category: 'Logic', value: '얼굴 랜드마크 좌표 기반 휴리스틱 알고리즘 (src/utils/faceAnalysis.ts)' },
+      { category: 'Animation', value: 'Framer Motion' },
+      { category: 'Camera', value: 'react-webcam' },
+      { category: 'I18n', value: 'next-intl' },
+    ],
+    screenshot: '/screenshots/animal.png',
+    note: '모든 분석은 사용자 기기 내에서만 이루어지며, 사진은 절대 서버로 전송되거나 저장되지 않습니다.',
+  },
 ];
