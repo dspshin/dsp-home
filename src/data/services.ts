@@ -47,6 +47,6 @@ export const services: Service[] = [
       { category: 'Styling', value: 'Tailwind CSS v4' },
       { category: 'Logic', value: 'lunar-javascript' },
     ],
-    screenshot: 'https://saju.dsp.ai.kr/screenshot.png', // Example placeholder
+    screenshot: '/screenshots/saju.png',
   },
 ];
