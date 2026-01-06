@@ -94,4 +94,24 @@ export const services: Service[] = [
     ],
     screenshot: '/screenshots/color.png',
   },
+  {
+    id: 'face-fate',
+    title: 'FaceFate - 디지털 관상',
+    link: 'https://facefate.dsp.ai.kr/',
+    icon: 'https://facefate.dsp.ai.kr/icon',
+    description: 'FaceFate는 서버리스 클라이언트 사이드 웹 애플리케이션으로, 사용자의 얼굴 특징을 실시간으로 분석하여 신비로운 운세 결과를 제공합니다. AI(MediaPipe)와 고전적인 관상학(Physiognomy) 이론을 결합하여, 서버 전송 없이 브라우저 내에서 안전하게 모든 분석이 이루어집니다.',
+    features: [
+      '서버리스 클라이언트 사이드 분석 (100% 프라이버시 보호)',
+      '478개 3D 얼굴 랜드마크 기반 정밀 계측',
+      '관상학 기반 4대 운명(성격, 재물, 리더십, 생명력) 분석',
+    ],
+    techStack: [
+      { category: 'Framework', value: 'Next.js 15 (App Router)' },
+      { category: 'Language', value: 'TypeScript' },
+      { category: 'Styling', value: 'Tailwind CSS' },
+      { category: 'AI/Vision', value: 'MediaPipe Tasks Vision (Face Landmarker)' },
+    ],
+    screenshot: '/screenshots/facefate.png',
+    note: 'Google MediaPipe를 통해 추출된 478개의 3D 얼굴 랜드마크(Mesh)를 기반으로, 벡터 연산을 통해 주요 관상 포인트를 정량적으로 분석합니다.',
+  },
 ];

@@ -76,8 +76,11 @@ export default function ServiceCard({ service }: { service: Service }) {
                             {/* Screenshot */}
                             {/* Screenshot */}
                             {service.screenshot && (
-                                <div
-                                    className="rounded-xl overflow-hidden border border-white/10 mt-4 bg-black/20 mx-auto"
+                                <a
+                                    href={service.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block rounded-xl overflow-hidden border border-white/10 mt-4 bg-black/20 mx-auto cursor-pointer"
                                     style={{ width: '50%' }}
                                 >
                                     <img
@@ -85,7 +88,7 @@ export default function ServiceCard({ service }: { service: Service }) {
                                         alt={`${service.title} Screenshot`}
                                         className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300"
                                     />
-                                </div>
+                                </a>
                             )}
 
                             {/* Action Button */}
