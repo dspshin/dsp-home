@@ -73,28 +73,42 @@ export default function ServiceCard({ service }: { service: Service }) {
                                 {service.description}
                             </p>
 
+                            {/* Screenshot */}
+                            {/* Screenshot */}
+                            {service.screenshot && (
+                                <div
+                                    className="rounded-xl overflow-hidden border border-white/10 mt-4 bg-black/20 mx-auto"
+                                    style={{ width: '50%' }}
+                                >
+                                    <img
+                                        src={service.screenshot}
+                                        alt={`${service.title} Screenshot`}
+                                        className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300"
+                                    />
+                                </div>
+                            )}
+
                             {/* Action Button */}
-                            <div>
+                            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '8px', marginBottom: '8px' }}>
                                 <a
                                     href={service.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center w-full sm:w-auto gap-2 px-6 py-3 bg-[var(--primary)] hover:bg-[var(--accent)] text-white rounded-xl font-semibold transition-colors duration-200 shadow-lg shadow-orange-500/20"
+                                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--primary)] hover:text-[var(--accent)] transition-colors"
                                 >
-                                    서비스 바로가기 <ExternalLink className="w-4 h-4" />
+                                    서비스 바로가기 <ExternalLink className="w-3.5 h-3.5" />
                                 </a>
                             </div>
 
                             {/* Features */}
                             <div>
-                                <h4 className="text-xs font-bold text-[var(--text-tertiary)] uppercase tracking-widest mb-3 flex items-center gap-2">
+                                <h4 className="text-xs font-bold text-[var(--text-tertiary)] uppercase tracking-widest mb-3 flex items-center justify-center gap-2">
                                     <Layers className="w-4 h-4 text-[var(--secondary)]" /> 핵심 기능
                                 </h4>
-                                <ul className="grid gap-2 grid-cols-1 sm:grid-cols-2">
+                                <ul className="flex flex-col items-center space-y-1">
                                     {service.features.map((feature, i) => (
-                                        <li key={i} className="flex items-center gap-2.5 text-sm bg-white/5 p-3 rounded-lg border border-white/5">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0" />
-                                            <span className="text-[var(--text-primary)] font-medium">{feature}</span>
+                                        <li key={i} className="text-sm text-[var(--text-secondary)] text-center">
+                                            {feature}
                                         </li>
                                     ))}
                                 </ul>
@@ -102,17 +116,18 @@ export default function ServiceCard({ service }: { service: Service }) {
 
                             {/* Tech Stack */}
                             <div>
-                                <h4 className="text-xs font-bold text-[var(--text-tertiary)] uppercase tracking-widest mb-3 flex items-center gap-2">
+                                <h4 className="text-xs font-bold text-[var(--text-tertiary)] uppercase tracking-widest mb-3 flex items-center justify-center gap-2 mt-6">
                                     <Code className="w-4 h-4 text-[var(--primary)]" /> 기술 스택
                                 </h4>
-                                <div className="space-y-2">
+                                <ul className="flex flex-col items-center space-y-2">
                                     {service.techStack.map((tech, i) => (
-                                        <div key={i} className="grid grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr] gap-3 text-sm p-3 rounded-lg bg-white/5 border border-white/5">
-                                            <span className="font-semibold text-[var(--text-secondary)]">{tech.category}</span>
-                                            <span className="text-[var(--text-primary)]">{tech.value}</span>
-                                        </div>
+                                        <li key={i} className="text-sm text-[var(--text-secondary)] text-center">
+                                            <span className="font-semibold text-[var(--text-primary)] opacity-80">{tech.category}</span>
+                                            <span className="mx-2 text-[var(--text-tertiary)]">|</span>
+                                            <span>{tech.value}</span>
+                                        </li>
                                     ))}
-                                </div>
+                                </ul>
                             </div>
 
                             {/* Note */}

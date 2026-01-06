@@ -7,6 +7,7 @@ export interface Service {
   features: string[];
   techStack: { category: string; value: string }[];
   note?: string;
+  screenshot?: string;
 }
 
 export const services: Service[] = [
@@ -26,6 +27,7 @@ export const services: Service[] = [
       { category: 'Backend', value: 'FastAPI, Python 3.9+, Pydantic' },
       { category: 'Database', value: 'Supabase (PostgreSQL)' },
     ],
+    screenshot: '/screenshots/tower.png',
     note: '작은 모바일 화면에의 최적화는 되어 있지 않으므로 노트북이나 데스크탑, 테블릿으로 실행하는 것이 좋습니다.',
   },
   {
@@ -45,5 +47,6 @@ export const services: Service[] = [
       { category: 'Styling', value: 'Tailwind CSS v4' },
       { category: 'Logic', value: 'lunar-javascript' },
     ],
+    screenshot: 'https://saju.dsp.ai.kr/screenshot.png', // Example placeholder
   },
 ];
