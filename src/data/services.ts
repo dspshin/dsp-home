@@ -76,8 +76,8 @@ export const services: Service[] = [
   {
     id: 'personal-color',
     title: 'Personal Color Analysis',
-    link: 'https://color.dsp.ai.kr/', // Placeholder
-    icon: 'https://color.dsp.ai.kr/icon.png', // Placeholder
+    link: 'https://color.dsp.ai.kr/',
+    icon: 'https://color.dsp.ai.kr/icon',
     description: '정교한 얼굴 분석 엔진(8-Type System)을 기반으로 한 퍼스널 컬러 진단 서비스입니다. Google MediaPipe로 얼굴 랜드마크를 추적하고, 뺨 영역의 색상을 분석하여 8가지 세부 타입(Spring, Summer, Autumn, Winter 등)을 제시합니다.',
     features: [
       '정교한 얼굴 분석 엔진 (8-Type System)',

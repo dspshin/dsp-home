@@ -23,7 +23,7 @@ export default function ServiceCard({ service }: { service: Service }) {
                 style={{ display: 'flex', alignItems: 'center', gap: '24px' }}
             >
                 <div
-                    className="relative w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-lg overflow-hidden bg-white/5 border border-white/10 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center"
+                    className="relative w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-lg overflow-hidden bg-white/5 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center"
                     style={{ width: '48px', height: '48px', minWidth: '48px' }}
                 >
                     {service.icon ? (
@@ -132,8 +132,8 @@ export default function ServiceCard({ service }: { service: Service }) {
 
                             {/* Note */}
                             {service.note && (
-                                <div className="flex items-start gap-3 p-4 rounded-xl bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-sm font-medium">
-                                    <Monitor className="w-5 h-5 shrink-0 mt-0.5" />
+                                <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-sm font-medium text-center">
+                                    <Monitor className="w-5 h-5 shrink-0" />
                                     <p>{service.note}</p>
                                 </div>
                             )}
