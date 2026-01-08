@@ -1,5 +1,6 @@
 import { services } from '@/data/services';
 import ServiceCard from '@/components/ServiceCard';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -25,6 +26,15 @@ export default function Home() {
         </section>
 
         <footer className="mt-20 pt-10 border-t border-white/5 text-center">
+          <div className="mb-4 flex justify-center items-center">
+            <Link href="/blog" className="text-[var(--text-tertiary)] hover:text-white text-sm transition-colors">
+              블로그
+            </Link>
+            <span className="mx-6 text-[var(--text-tertiary)] opacity-30">|</span>
+            <Link href="/privacy" className="text-[var(--text-tertiary)] hover:text-white text-sm transition-colors">
+              개인정보처리방침
+            </Link>
+          </div>
           <p className="text-[var(--text-tertiary)] text-sm">
             © {new Date().getFullYear()} DSP. All rights reserved.
           </p>
