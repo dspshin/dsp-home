@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
         slug: 'animal-face',
         title: '나는 강아지상일까? AI 동물상 테스트',
         description: '인공지능이 분석하는 내 얼굴 속 동물 이미지. 재미로 보는 관상학과 딥러닝의 만남.',
-        date: '2024-01-08',
+        date: '2026-01-15',
         tags: ['AI', '동물상', '관상', '테스트'],
         thumbnail: '/screenshots/animal.png',
         relatedLinks: [
@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
         slug: 'personal-color',
         title: 'AI는 내 퍼스널컬러를 어떻게 진단할까요?',
         description: 'AI가 분석하는 퍼스널컬러 진단 원리와 8가지 세부 타입(Spring, Summer, Autumn, Winter)에 대해 알아봅니다.',
-        date: '2024-01-07',
+        date: '2026-01-12',
         tags: ['AI', '퍼스널컬러', '색상학'],
         thumbnail: '/screenshots/color.png',
         relatedLinks: [
@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
         slug: 'face-fate',
         title: '인공지능이 읽어주는 나의 관상과 운명',
         description: '전통 관상학의 지혜와 최첨단 얼굴 인식 기술의 만남. 얼굴에 쓰여진 당신의 인생 지도를 해석합니다.',
-        date: '2024-01-06',
+        date: '2026-01-08',
         tags: ['AI', '관상', '운세'],
         thumbnail: '/screenshots/facefate.jpg',
         relatedLinks: [
@@ -121,7 +121,7 @@ export const blogPosts: BlogPost[] = [
         slug: 'reading',
         title: '초보자도 알기 쉬운 사주팔자 보는 법',
         description: '복잡해 보이는 만세력, 이것만 알면 내 운명의 지도를 읽을 수 있습니다. 연월일시 네 기둥의 의미를 쉽고 정확하게 알려드립니다.',
-        date: '2024-01-05',
+        date: '2026-01-05',
         tags: ['사주', '만세력', '기초'],
         thumbnail: '/screenshots/saju.png',
         content: `
@@ -145,7 +145,7 @@ export const blogPosts: BlogPost[] = [
         slug: '2026-forecast',
         title: '2026년 병오년(丙午年) 띠별 운세 미리보기',
         description: '뜨거운 불의 기운이 가득한 붉은 말의 해, 누구에게 가장 큰 기회가 찾아올까요? 범띠, 개띠, 양띠의 운세를 알아봅니다.',
-        date: '2024-01-04',
+        date: '2026-01-01',
         tags: ['2026년', '운세', '띠별운세'],
         thumbnail: '/screenshots/saju.png',
         content: `
@@ -174,7 +174,7 @@ export const blogPosts: BlogPost[] = [
         slug: 'yin-yang',
         title: '음양오행이란 무엇인가? 목화토금수 상생상극',
         description: '우주를 구성하는 다섯 가지 기운, 그리고 그들이 만들어내는 조화의 원리에 대해 알아봅니다.',
-        date: '2024-01-03',
+        date: '2025-12-28',
         tags: ['음양오행', '사주', '철학'],
         thumbnail: '/screenshots/saju.png',
         content: `
@@ -201,7 +201,7 @@ export const blogPosts: BlogPost[] = [
         slug: 'guide',
         title: '2026년 병오년과 사주 가이드',
         description: '다가오는 2026년인 병오년(붉은 말의 해)의 의미와 내 사주 색상이 상징하는 오행을 확인해보세요.',
-        date: '2024-01-02',
+        date: '2025-12-20',
         tags: ['2026년', '병오년', '오행'],
         thumbnail: '/screenshots/saju.png',
         content: `
@@ -227,7 +227,7 @@ export const blogPosts: BlogPost[] = [
         slug: 'howitworks',
         title: '사주 서비스 동작 원리와 개인정보 보호',
         description: '생년월일이 서버에 저장되지 않는 안전한 클라이언트 사이드 구조와 사주 명리학적 분석 원리를 투명하게 공개합니다.',
-        date: '2024-01-01',
+        date: '2025-12-15',
         tags: ['보안', '테크', '원리'],
         thumbnail: '/screenshots/saju.png',
         content: `
