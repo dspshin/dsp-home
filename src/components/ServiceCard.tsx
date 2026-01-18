@@ -15,7 +15,7 @@ export default function ServiceCard({ service }: { service: Service }) {
             layout
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="glass rounded-xl overflow-hidden transition-all duration-300 hover:bg-white/5 active:scale-[0.98] sm:active:scale-100 group"
+            className="glass rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:bg-white border hover:border-[var(--primary)]/30 active:scale-[0.98] sm:active:scale-100 group border-transparent"
         >
             <div
                 className="p-4 sm:p-5 cursor-pointer flex items-center justify-between"
@@ -23,7 +23,7 @@ export default function ServiceCard({ service }: { service: Service }) {
                 style={{ display: 'flex', alignItems: 'center', gap: '24px' }}
             >
                 <div
-                    className="relative w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-lg overflow-hidden bg-white/5 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center"
+                    className="relative w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-lg overflow-hidden bg-gray-50 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center"
                     style={{ width: '48px', height: '48px', minWidth: '48px' }}
                 >
                     {service.icon ? (
@@ -48,10 +48,10 @@ export default function ServiceCard({ service }: { service: Service }) {
 
                 <button
                     className={clsx(
-                        "p-2 rounded-full transition-all duration-300 shrink-0",
+                        "p-2 rounded-full transition-all duration-300 shrink-0 hover:bg-gray-100",
                         isOpen ? "rotate-180" : ""
                     )}
-                    style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.1)', color: '#a8a29e' }}
+                    style={{ background: 'transparent', border: '1px solid var(--card-border)', color: 'var(--text-tertiary)' }}
                     aria-label={isOpen ? "Collapse" : "Expand"}
                 >
                     <ChevronDown className="w-5 h-5" />
@@ -66,7 +66,7 @@ export default function ServiceCard({ service }: { service: Service }) {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
                     >
-                        <div className="px-5 pb-6 text-[var(--text-secondary)] space-y-6 border-t border-white/5 pt-5 sm:px-6">
+                        <div className="px-5 pb-6 text-[var(--text-secondary)] space-y-6 border-t border-gray-100 pt-5 sm:px-6">
 
                             {/* Description */}
                             <p className="leading-relaxed text-[var(--text-primary)] text-sm sm:text-base">
@@ -74,13 +74,12 @@ export default function ServiceCard({ service }: { service: Service }) {
                             </p>
 
                             {/* Screenshot */}
-                            {/* Screenshot */}
                             {service.screenshot && (
                                 <a
                                     href={service.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block rounded-xl overflow-hidden border border-white/10 mt-4 bg-black/20 mx-auto cursor-pointer"
+                                    className="block rounded-xl overflow-hidden mt-4 bg-gray-50 mx-auto cursor-pointer shadow-sm hover:shadow-md transition-shadow"
                                     style={{ width: '50%' }}
                                 >
                                     <img
@@ -135,7 +134,7 @@ export default function ServiceCard({ service }: { service: Service }) {
 
                             {/* Note */}
                             {service.note && (
-                                <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-sm font-medium text-center">
+                                <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-[var(--primary)]/5 border border-[var(--primary)]/20 text-[var(--primary)] text-sm font-medium text-center">
                                     <Monitor className="w-5 h-5 shrink-0" />
                                     <p>{service.note}</p>
                                 </div>
@@ -145,6 +144,6 @@ export default function ServiceCard({ service }: { service: Service }) {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </motion.div >
+        </motion.div>
     );
 }

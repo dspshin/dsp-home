@@ -47,7 +47,7 @@ export default function Home() {
                   href={`/blog/${post.slug}`}
                   className="group block"
                 >
-                  <article className="glass rounded-xl p-6 transition-all duration-300 hover:bg-white/5 hover:border-[var(--primary)]/30">
+                  <article className="glass rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:bg-white border-transparent hover:border-[var(--primary)]/30">
                     <div className="flex flex-col gap-3">
                       <div className="flex items-center justify-between text-xs text-[var(--text-tertiary)] uppercase tracking-wider font-medium">
                         <span>{post.tags[0]}</span>
@@ -62,7 +62,7 @@ export default function Home() {
                         {post.description}
                       </p>
 
-                      <div className="flex items-center text-xs font-semibold text-[var(--text-tertiary)] group-hover:text-white mt-2 transition-colors">
+                      <div className="flex items-center text-xs font-semibold text-[var(--text-tertiary)] group-hover:text-[var(--primary)] mt-2 transition-colors">
                         Read More <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="mt-8 text-center">
             <Link
               href="/blog"
-              className="inline-flex items-center text-sm text-[var(--text-secondary)] hover:text-white transition-colors py-2 px-4 rounded-full border border-white/5 hover:bg-white/5 hover:border-white/10"
+              className="inline-flex items-center text-sm text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors py-2 px-4 rounded-full hover:bg-gray-50 hover:border-gray-300"
             >
               블로그 전체보기 <ArrowRight className="w-3 h-3 ml-2" />
             </Link>
@@ -82,17 +82,17 @@ export default function Home() {
         </section>
 
 
-        <footer className="border-t border-white/5 text-center">
+        <footer className="border-t border-gray-100 text-center mt-20 pt-10">
           <div className="mb-4 flex justify-center items-center">
-            <Link href="/about" className="text-[var(--text-tertiary)] hover:text-white text-sm transition-colors">
+            <Link href="/about" className="text-[var(--text-tertiary)] hover:text-[var(--primary)] text-sm transition-colors">
               소개
             </Link>
             <span className="mx-6 text-[var(--text-tertiary)] opacity-30">|</span>
-            <Link href="/blog" className="text-[var(--text-tertiary)] hover:text-white text-sm transition-colors">
+            <Link href="/blog" className="text-[var(--text-tertiary)] hover:text-[var(--primary)] text-sm transition-colors">
               블로그
             </Link>
             <span className="mx-6 text-[var(--text-tertiary)] opacity-30">|</span>
-            <Link href="/privacy" className="text-[var(--text-tertiary)] hover:text-white text-sm transition-colors">
+            <Link href="/privacy" className="text-[var(--text-tertiary)] hover:text-[var(--primary)] text-sm transition-colors">
               개인정보처리방침
             </Link>
           </div>
