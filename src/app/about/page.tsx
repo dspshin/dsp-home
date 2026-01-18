@@ -1,4 +1,18 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+    title: 'About DSP - Digital Service Platform',
+    description: 'DSP(Digital Service Platform)는 AI 기술을 활용하여 일상에 즐거움을 더하는 웹 서비스 연구소입니다. 사주, 관상, 성격 분석 등 다양한 AI 서비스를 제공합니다.',
+    openGraph: {
+        title: 'About DSP - Digital Service Platform',
+        description: 'AI와 일상의 즐거운 만남, DSP에 대해 알아보세요.',
+        url: 'https://dsp.ai.kr/about',
+        siteName: 'DSP',
+        locale: 'ko_KR',
+        type: 'website',
+    },
+};
 
 export default function AboutPage() {
     return (
