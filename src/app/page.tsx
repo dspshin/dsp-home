@@ -84,6 +84,10 @@ export default function Home() {
 
         <footer className="border-t border-white/5 text-center">
           <div className="mb-4 flex justify-center items-center">
+            <Link href="/about" className="text-[var(--text-tertiary)] hover:text-white text-sm transition-colors">
+              소개
+            </Link>
+            <span className="mx-6 text-[var(--text-tertiary)] opacity-30">|</span>
             <Link href="/blog" className="text-[var(--text-tertiary)] hover:text-white text-sm transition-colors">
               블로그
             </Link>
