@@ -65,24 +65,25 @@ function BlogCard({ post, index }: { post: BlogPost; index: number }) {
             transition={{ duration: 0.4, delay: index * 0.1 }}
         >
             <Link href={`/blog/${post.slug}`} className="group block h-full no-underline text-inherit">
-                <article className="h-full p-6 sm:p-8 rounded-[2rem] bg-white border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-start justify-between">
+                <article className="h-full p-6 rounded-xl bg-white border border-gray-200 hover:border-[var(--primary)]/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
 
-                    <div className="space-y-6 w-full pl-[10px]">
+                    <div className="space-y-4">
+                        {/* Tags or Date could go here if needed, keeping it simple for now */}
 
                         {/* Title & Description */}
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-[var(--text-primary)] leading-snug group-hover:text-[var(--primary)] transition-colors">
+                        <div>
+                            <h2 className="text-xl font-bold text-[var(--text-primary)] leading-tight group-hover:text-[var(--primary)] transition-colors mb-3">
                                 {post.title}
                             </h2>
-                            <p className="text-[var(--text-secondary)] leading-relaxed line-clamp-3">
+                            <p className="text-[var(--text-secondary)] text-sm leading-relaxed line-clamp-3">
                                 {post.description}
                             </p>
                         </div>
                     </div>
 
                     {/* Read Link */}
-                    <div className="pt-8 flex items-center text-[var(--text-tertiary)] group-hover:text-[var(--primary)] transition-colors font-medium pl-[10px]">
-                        읽으러 가기 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <div className="pt-6 flex items-center text-sm font-semibold text-[var(--text-tertiary)] group-hover:text-[var(--primary)] transition-colors">
+                        읽으러 가기 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </div>
 
                 </article>
