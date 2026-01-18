@@ -9,7 +9,7 @@ export default function BlogListPage() {
     const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return (
-        <main className="min-h-screen bg-black text-white selection:bg-[#fbbf24] selection:text-black font-sans">
+        <main className="min-h-screen bg-[var(--background)] text-[var(--text-primary)] font-sans">
 
             <div className="max-w-6xl mx-auto px-6 py-20">
 
@@ -17,7 +17,7 @@ export default function BlogListPage() {
                 <nav className="mb-16">
                     <Link
                         href="/"
-                        className="inline-flex items-center text-sm text-gray-400 hover:text-white transition-colors no-underline"
+                        className="inline-flex items-center text-sm text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors no-underline"
                     >
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         메인으로 돌아가기
@@ -26,10 +26,10 @@ export default function BlogListPage() {
 
                 {/* Header Section */}
                 <header className="mb-20 max-w-2xl">
-                    <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
+                    <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight text-[var(--text-primary)]">
                         AI 분석 & 이야기
                     </h1>
-                    <p className="text-xl text-gray-400 leading-relaxed">
+                    <p className="text-xl text-[var(--text-secondary)] leading-relaxed">
                         사주, 관상, 퍼스널컬러 등 다양한 AI 분석과 <br />
                         흥미로운 운세 지식을 한곳에서 만나보세요.
                     </p>
@@ -43,8 +43,8 @@ export default function BlogListPage() {
                 </div>
 
                 {/* Footer */}
-                <footer className="mt-32 pt-10 border-t border-white/10 text-center">
-                    <p className="text-gray-500 text-sm">© {new Date().getFullYear()} DSP. All rights reserved.</p>
+                <footer className="mt-32 pt-10 border-t border-gray-200 text-center">
+                    <p className="text-[var(--text-tertiary)] text-sm">© {new Date().getFullYear()} DSP. All rights reserved.</p>
                 </footer>
             </div>
         </main>
@@ -65,23 +65,23 @@ function BlogCard({ post, index }: { post: BlogPost; index: number }) {
             transition={{ duration: 0.4, delay: index * 0.1 }}
         >
             <Link href={`/blog/${post.slug}`} className="group block h-full no-underline text-inherit">
-                <article className="h-full p-6 sm:p-8 rounded-[2rem] bg-[#080808] hover:bg-[#121212] transition-all duration-300 flex flex-col items-start justify-between">
+                <article className="h-full p-6 sm:p-8 rounded-[2rem] bg-white border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-start justify-between">
 
                     <div className="space-y-6 w-full pl-[10px]">
 
                         {/* Title & Description */}
                         <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-gray-300 leading-snug group-hover:text-amber-400 transition-colors">
+                            <h2 className="text-2xl font-bold text-[var(--text-primary)] leading-snug group-hover:text-[var(--primary)] transition-colors">
                                 {post.title}
                             </h2>
-                            <p className="text-gray-500 leading-relaxed line-clamp-3">
+                            <p className="text-[var(--text-secondary)] leading-relaxed line-clamp-3">
                                 {post.description}
                             </p>
                         </div>
                     </div>
 
                     {/* Read Link */}
-                    <div className="pt-8 flex items-center text-gray-500 group-hover:text-white transition-colors font-medium pl-[10px]">
+                    <div className="pt-8 flex items-center text-[var(--text-tertiary)] group-hover:text-[var(--primary)] transition-colors font-medium pl-[10px]">
                         읽으러 가기 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
 
